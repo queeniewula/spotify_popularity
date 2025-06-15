@@ -2,14 +2,23 @@ import streamlit as st
 import numpy as np
 import pickle
 import requests
+import os
 
 # load model
 @st.cache_resource
 def load_model():
     url = "https://huggingface.co/queeniewula/spotify-popularity-model/resolve/main/random_forest_model.pkl"
-    response = requests.get(url)
-    response.raise_for_status()
-    return pickle.loads(response.content)
+    local_path = "random_forest_model.pkl"
+
+    if not os.path.exists(local_path):
+        with requests.get(url, stream=True) as r:
+            r.raise_for_status()
+            with open(local_path, 'wb') as f:
+                for chunk in r.iter_content(chunk_size=8192):
+                    f.write(chunk)
+
+    with open(local_path, 'rb') as f:
+        return pickle.load(f)
 
 model = load_model()
 
