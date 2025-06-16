@@ -16,7 +16,7 @@ This version builds on that work by:
 - Creating a fully interactive web app with real song presets and prediction feedback
 - Exploring SHAP to interpret model predictions and understand feature importance (excluded from app for speed)
 
- > ⚠️ Due to large model file size and limitations of Streamlit Cloud, deployment is still in progress.
+ > ⚠️ Due to model file size and limitations of Streamlit Cloud, deployment is still in progress.
 
 The original group repo can be found here (for transparency):  
 [Original GitHub Repo](https://github.com/nathandhummi/popularity-wrapped)
