@@ -1,11 +1,11 @@
-# 🎧 Spotify Popularity Predictor
+# Spotify Popularity Predictor
 
 This Streamlit app predicts whether a song is likely to be popular on Spotify based on its audio features.  
 It’s powered by a Random Forest model trained on 100K+ Spotify tracks and deployed using a hosted model from Hugging Face.
 
 ---
 
-## 📌 Project Background
+## Project Background
 
 This app is a personal extension of a group machine learning project originally developed for UCLA's CS M148 course.  
 The group project explored what makes a song "popular" using audio feature data from Spotify and built several classification models.
@@ -16,12 +16,14 @@ This version builds on that work by:
 - Creating a fully interactive web app with real song presets and prediction feedback
 - Exploring SHAP to interpret model predictions and understand feature importance (excluded from app for speed)
 
+ > ⚠️ Due to large model file size and limitations of Streamlit Cloud, deployment is still in progress.
+
 The original group repo can be found here (for transparency):  
-🔗 [Original GitHub Repo](https://github.com/nathandhummi/popularity-wrapped)
+[Original GitHub Repo](https://github.com/nathandhummi/popularity-wrapped)
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 - `01_group_baseline_popularity_analysis.ipynb`:  
   The original group notebook from our UCLA CS M148 project. It includes data cleaning, exploratory analysis, model comparison (Logistic Regression, KNN, Random Forest, etc.), and initial evaluation metrics. This was built collaboratively.
@@ -34,16 +36,16 @@ The original group repo can be found here (for transparency):
 
 ---
 
-## 💡 Features
+## Features
 
-- 🎛 Adjustable sliders for song features (tempo, energy, valence, etc.)
-- 🎵 Preset examples from real popular songs
-- 🔍 Prediction feedback: “Popular” or “Unpopular”
-- ☁️ Model loaded from Hugging Face for lightweight deployment
+- Adjustable sliders for song features (tempo, energy, valence, etc.)
+- Preset examples from real popular songs
+- Prediction feedback: “Popular” or “Unpopular”
+- Model loaded from Hugging Face for lightweight deployment
 
 ---
 
-## 🧠 Model Details
+## Model Details
 
 - **Algorithm:** Random Forest Classifier  
 - **Training Set:** Balanced using SMOTE  
@@ -55,7 +57,7 @@ The original group repo can be found here (for transparency):
 
 ---
 
-## 📦 Setup & Run Locally
+## Setup & Run Locally
 
 1. Clone this repo:
    ```bash
